@@ -11,7 +11,7 @@ import base64
 
 
 # 初始化百度返回的音频文件地址，后面会变为全局变量，随需改变
-mp3_url = 'E:\Python_Doc\\voice_du\\voice_ss.mp3'
+mp3_url = r'E:\Python_Doc\voice_du\voice_ss.mp3'
 
 
 # 播放Mp3文件
@@ -63,7 +63,7 @@ def baidu_api(answer):
     # 本地Mp3语音文件保存位置
     iname = random.randrange(1, 99999)
     global mp3_url
-    mp3_url = 'E:\Python_Doc\\voices\\voice_tts' + str(iname) + '.mp3'
+    mp3_url = r'E:\Python_Doc\voices\voice_tts' + str(iname) + '.mp3'
     with open(mp3_url, 'wb') as f:
         f.write(res.content)
 
@@ -77,7 +77,7 @@ def baidu_api2(answer):
     # 本地Mp3语音文件保存位置
     name = random.randrange(1, 99999)
     global mp3_url
-    mp3_url = 'E:\Python_Doc\\voice_du\\voice_tsn' + str(name) + '.mp3'
+    mp3_url = r'E:\Python_Doc\voice_du\voice_tsn' + str(name) + '.mp3'
     voice_fp = open(mp3_url, 'wb+')
     voice_fp.write(voice_data)
     voice_fp.close()
